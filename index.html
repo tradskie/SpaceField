@@ -36,6 +36,56 @@
   <source src="./assets/img/space-background.mp4" type="video/mp4">
 </video>
 
+<style>
+  /* Style The Dropdown Button */
+  .dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #00000033;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #212429}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: transparent;
+  }
+  </style>
+
 <body>
 
   <!-- ======= Header ======= -->
@@ -46,7 +96,7 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>	
-	  <li> 
+	        <li> 
             <a class="nav-link" href="https://poocoin.app/tokens/0x3b56a620d8a4f68049964cffe674da9174193bc2" target="_blank"><img class="nav-logo" id="logo" alt="" src="assets/img/poocoin.svg"></img>Buy $SPO</a>
           </li>	
 	  <!-- 
@@ -54,26 +104,27 @@
 	    <a class="nav-link scrollto" href="#faq">FAQs</a>
 	  </li>
 	  -->	
-	  <li> 
+	         <li> 
             <a class="nav-link" href="assets/img/whitepaper.pdf" target="_blank"><img class="nav-logo" id="logo" alt="" src="assets/img/paper.svg"></img>White Paper</a>
-          </li> 
-	  <li>
-            <a class="nav-link" href="https://lottery.spaceprojects.online/" target="_blank"><img class="nav-logo" id="logo" alt="" src="assets/img/lottery.svg"></img>Space Lottery</a>
           </li>
-	 <!-- href="https://spaceport.spaceprojects.online/?ref=0x2f0ead34aBDD8375382AD56B8da4b14d94AD9B66" -->
-	  <li>
-            <a class="nav-link" href="https://spaceport.spaceprojects.online/?ref=0x2f0ead34aBDD8375382AD56B8da4b14d94AD9B66" target="_blank"><img class="nav-logo" id="logo" alt="" src="assets/img/OreToken1.png"></img>Space Port</a>
-          </li>
+          <div class="dropdown">
+            <button class="dropbtn"><img class="nav-logo" id="logo" alt="" src="assets/img/OreToken1.png">Projects</button>
+            <div class="dropdown-content">
+              <a href="https://lottery.spaceprojects.online/"><img class="nav-logo" id="logo" alt="" src="assets/img/lottery.svg">Space Lottery</a>
+              <a href="https://spaceport.spaceprojects.online/?ref=0x2f0ead34aBDD8375382AD56B8da4b14d94AD9B66"><img class="nav-logo" id="logo" alt="" src="assets/img/OreToken1.png">Space Port</a>
+              <a href="https://spaceminer.spaceprojects.online?ref=0x7ec5c8753ed76a517a5c48de14f489f334b33ed2"><img class="nav-logo" id="logo" alt="" src="assets/img/Space-logo-Orange.svg">Space Miner</a>
+              <a href="https://dao.spaceprojects.online/dashboard"><img class="nav-logo" id="logo" alt="" src="assets/img/Space-logo-Orange.svg">Space Dao</a>
+            </div>
+          </div>
           <li>
-	    <a class="nav-link" href="https://bscscan.com/address/0x62d1df356ffFEF35AF9a5B7619783EBD3Dc863e8" target="_blank"><img class="nav-logo" id="logo" alt="" src="assets/img/bscscan-logo-light-circle.svg"></img>Contract</a>
+	           <a class="nav-link" href="https://bscscan.com/address/0x62d1df356ffFEF35AF9a5B7619783EBD3Dc863e8" target="_blank"><img class="nav-logo" id="logo" alt="" src="assets/img/bscscan-logo-light-circle.svg"></img>Contract</a>
           </li>
-	  <li>
+	        <li>
             <a class="nav-link" href="https://twitter.com/SpaceEcoSystem" target="_blank"><img class="nav-logo" id="twitter" alt="" src="assets/img/twitter.svg"></img>Twitter</a>
           </li> 
            <li>
             <a class="nav-link" href="https://t.me/SpaceEcosystem" target="_blank"><img class="nav-logo" id="telegram" alt="" src="assets/img/telegram.svg"></img>Telegram</a>
-          </li> 
-
+          </li>
           <li>
             <a class="nav-link" >
               <button id="enableMetamask" class="btn connect-btn">Connect</button>
