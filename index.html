@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>The Space Field</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/OreToken.png" rel="icon" type="image/jpg">
+  <link href="assets/img/OreToken.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/3.0.0-rc.5/web3.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<video autoplay muted loop id="myVideo">
+  <source src="./assets/img/space-background.mp4" type="video/mp4">
+</video>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0"><a href="index.html"><img style="height: 100%; width: 40px; padding-right: 5px;" src="assets/img/OreToken.png" alt="">The <span class="bnb">Space Field</span> Game</a></img></h1>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>	
+	  <li> 
+            <a class="nav-link" href="https://poocoin.app/tokens/0x3b56a620d8a4f68049964cffe674da9174193bc2" target="_blank"><img class="nav-logo" id="logo" alt="" src="assets/img/poocoin.svg"></img>Buy $SPO</a>
+          </li>	
+	  <!-- 
+	  <li>
+	    <a class="nav-link scrollto" href="#faq">FAQs</a>
+	  </li>
+	  -->	
+	  <li> 
+            <a class="nav-link" href="assets/img/whitepaper.pdf" target="_blank"><img class="nav-logo" id="logo" alt="" src="assets/img/paper.svg"></img>White Paper</a>
+          </li> 
+	  <li>
+            <a class="nav-link" href="https://lottery.spaceprojects.online/" target="_blank"><img class="nav-logo" id="logo" alt="" src="assets/img/lottery.svg"></img>Space Lottery</a>
+          </li>
+	 <!-- href="https://spaceport.spaceprojects.online/?ref=0x2f0ead34aBDD8375382AD56B8da4b14d94AD9B66" -->
+	  <li>
+            <a class="nav-link" href="https://spaceport.spaceprojects.online/?ref=0x2f0ead34aBDD8375382AD56B8da4b14d94AD9B66" target="_blank"><img class="nav-logo" id="logo" alt="" src="assets/img/OreToken1.png"></img>Space Port</a>
+          </li>
+          <li>
+	    <a class="nav-link" href="https://bscscan.com/address/0x62d1df356ffFEF35AF9a5B7619783EBD3Dc863e8" target="_blank"><img class="nav-logo" id="logo" alt="" src="assets/img/bscscan-logo-light-circle.svg"></img>Contract</a>
+          </li>
+	  <li>
+            <a class="nav-link" href="https://twitter.com/SpaceEcoSystem" target="_blank"><img class="nav-logo" id="twitter" alt="" src="assets/img/twitter.svg"></img>Twitter</a>
+          </li> 
+           <li>
+            <a class="nav-link" href="https://t.me/SpaceEcosystem" target="_blank"><img class="nav-logo" id="telegram" alt="" src="assets/img/telegram.svg"></img>Telegram</a>
+          </li> 
+
+          <li>
+            <a class="nav-link" >
+              <button id="enableMetamask" class="btn connect-btn">Connect</button>
+            </a>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="bg d-flex align-items-center justify-content-center">
+    <div class="container">
+      <!-- <div class="row" style="justify-content: center; margin-bottom: 30px;">
+        <div class="big-timer" id="start-container">
+          Starts in <strong id="start-timer">00:00:00</strong>
+        </div>
+      </div> -->
+      <div class="content-box" data-aos="zoom-in">
+        <div class="row">
+          <div class="col-lg-6">
+            <h1>Welcome to our <span class="busd">Space Field</span>!</h1>
+            <h4>
+              A game developed under the Space Eco System. Recruit some astronauts and let them find space treasures for you! 
+            </h4>
+			<h4>
+            <i class="bi-check2-square bnb-icon"></i>
+            <span id="daily-rate">3.33% Daily ~ 1215.45% APR</span>
+          </h4>
+          <h4>
+            <i class="bi-check2-square bnb-icon"></i>
+            <span id="daily-compound">4% Recruit Bonus</span>
+          </h4>
+          <h4>
+            <i class="bi-check2-square bnb-icon"></i>
+            <span id="ref-bonus">5% Game Referral Bonus</span>
+          </h4>
+			<h4>
+            <i class="bi-check2-square bnb-icon"></i>
+            <span>12 Hours Withdraw Cooldown</span>
+          </h4>
+			<h4>
+            <i class="bi-check2-square bnb-icon"></i>
+            <span>12 Hours Compound Timer</span>
+          </h4>		  
+          <h4>
+          </div>
+          <div class="col-lg-6">
+            <div class="stats-row-container">
+              <div class="stat">
+                <div class="header">
+				  <br>
+                  Total<span class="busd">SPACE ORE</span>Staked
+                </div>
+                <strong class="number" id="total-staked">-</strong>
+              </div>
+              <div class="stat">
+                <div class="header">
+				  <br>
+                  Total<span class="busd">SPACE ORE</span>Referrals
+                </div>
+                <strong class="number" id="total-ref">-</strong>
+              </div>
+	      <div class="stat">
+                <div class="header">
+				  <br>
+                  Total<span class="busd">SPACE ORE</span>Locked
+                </div>
+                <strong class="number" id="contract-balance">-</strong>
+              </div>
+			  <div class="stat">
+                <div class="header">
+				  <br>
+                  Total<span class="busd">Deposit</span>Count
+                </div>
+                <strong class="number" id="total-players">-</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-2">
+          <div class="col-xl-12 disclaimer">
+            <i class="ri-alert-line"></i>
+            <span>
+              <strong>High Risk!</strong> Funds that are used to initially recruit astronauts (including re-hire) cannot be withdrawn, however your astronauts will indefinitely work and
+              find space treasures for you. Please play the game at your own risk. Remember, never invest more than you can afford to lose
+              and always do your own research.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+    <section id="mine" class="bg d-flex">
+      <div class="container main" data-aos="fade-up">
+        <div class="content-box">
+          <h4>
+            Dashboard
+          </h4>
+          <div class="row stats-row-container">
+            <div class="col-lg-2 stat">
+              <div class="header">
+                <i class="bi-bank"></i>
+                <span>Initial Deposit</span>
+              </div>
+              <strong id="initial-deposit" class="number">-</strong>
+              <div>
+                <strong class="busd">SPACE ORE</strong>
+              </div>
+            </div>
+            <div class="col-lg-2 stat">
+              <div class="header">
+                <i class="bi-bank"></i>
+                Total Deposit
+              </div>
+              <strong id="total-deposit" class="number">-</strong>
+              <div>
+                <strong class="busd">SPACE ORE</strong>
+              </div>
+            </div>
+            <div class="col-lg-2 stat">
+              <div class="header">
+                <i class="bi-wallet2"></i>
+                Sold
+              </div>
+              <div>
+                <strong id="total-withdrawn" class="number">-</strong>
+              </div>
+              <div>
+                <strong class="busd">SPACE ORE</strong>
+              </div>
+            </div>
+            <div class="col-lg-2 stat">
+              <div class="header">
+                <i class="bi-people"></i>
+                Referral Rewards
+                (<span id="ref-count">-</span>)
+              </div>
+              <div>
+                <strong id="ref-rewards-busd" class="number">-</strong>
+              </div>
+              <div>
+                <strong class="busd">SPACE ORE</strong>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5" style="justify-content: space-evenly;">
+            <div class="col-xl-5 first-box">
+              <div class="mine-card">
+                <div class="row example">
+                  <div class="col-lg-8">
+                    <div style="line-height: 1.8;">
+                      <strong>
+                        Recruit Example
+                      </strong>
+                      <div>
+                        <div>1000<span class="busd">SPACE ORE</span>gets you:</div>
+                        <div>
+                          <i class="bi-minecart"></i>
+                          Astronauts:
+                          <span id="example-miners">0</span>
+                        </div>
+                        <div>
+                          <i class="ri-coins-line ri-1x"></i>
+                          Daily:
+                          <span id="example-busd">0</span><span class="busd">SPACE ORE</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="wallet">
+                      <i class="bi-wallet2"></i>
+                      <strong>Wallet</strong>
+                      <div>
+                        <span id="user-balance">0</span><br><span class="busd">SPACE ORE</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+		<div class="btn-container">
+			<div class="approve-container">
+				<div style="padding-left: 5px; font-weight: 700;">
+				  <span style="font-size: 16px;">1.</span><!-- <i class="bi-bank"></i> -->
+				  <strong>Approve</strong><span class="busd"> SPACE ORE </span><span class="usd">(<span id="user-approved-spend">0</span> SPACE ORE approved)</span>
+				  <!-- <span class="usd">
+					≈ $<span id="user-approved-spend-usd">0 </span><span> USD</span>
+				  </span> -->
+				</div>
+				<div>
+				  <input class="form-control" id="approve-spend" name="approved-spend" step="1" type="number" value="1000">
+				  <button class="btn btn-invest" id="" onclick="approveMiner()" role="button">Approve SPACE ORE</button>
+				</div>
+			</div>
+			<strong>
+			  <i class="bi-bank"></i>
+			  Deposit <span class="busd">SPACE ORE</span>
+			  <span class="usd">
+				( min<span class="busd" id="min-deposit">0 </span>, 
+			  </span>	
+			  <span class="usd">
+				max<span class="busd" id="max-deposit">0</span>)
+			  </span>
+			  <input class="form-control" id="busd-spend" name="buy-miners" onChange="updateBuyPrice()" step="100" type="number" value="1000">
+			</strong>
+			<button class="btn btn-invest" id="buy-eggs-btn" onclick="buyEggs()" role="button" disabled>
+			  Recruit
+			  <span id="eggs-to-buy">0</span>
+			  Astronauts
+			</button>
+		</div>
+              </div>
+            </div>
+            <div class="col-xl-5">
+              <div class="mine-card">
+                <div class="miners-info" style="margin-bottom: unset;">
+                  <div>
+                    <i class="bi-minecart"></i>
+                    <span id="your-miners">- </span>
+                    Astronauts
+                  </div>
+                  <div>
+                    <i class="bi-arrow-down-short" style="font-size: 23px;"></i>
+                  </div>
+                  <div style="font-size: 21px;">
+                    <i class="ri-coins-line ri-1x"></i>
+                    <strong id="mined">-</strong>
+                    <span><strong class="busd">SPACE TREASURES</strong></span>
+                  </div>
+                  <div class="usd" style="font-size: 14px; padding: 15px 0 25px 0">
+                    <strong>Estimated daily yield</strong>
+                    <div>
+                      <span id="eggs-per-day">0</span><strong class="busd">SPACE ORE</strong>
+                    </div>
+                  </div>
+                </div>
+                <div>
+	          <br>
+		  <br>
+		  <br>
+		  <br>
+                  <div class="timer">
+                    <i class="bi-hourglass-split"></i>
+                    Bag will be full in
+                  </div>
+                  <div style="text-align: center; padding-bottom: 7px;"><span id="claim-timer">--:--:--</span></div>
+                  <div class="btn-container">
+                    <div>
+                      <button class="btn btn-withdraw" id="withdraw" onclick="sellEggs()" role="button" disabled>
+                        Sell Space Treasures
+                        <span class="cooldown" id="cooldown-timer">in --:--:--</span>
+                        <span class="tax" id="withdraw-tax">-40% tax</span>
+                      </button>
+                    </div>
+                    <div>
+                      <button class="btn btn-reinvest" id="reinvest" onclick="hatchEggs()" role="button" disabled>
+                        Recruit more Astronauts
+                        <span class="compound">
+                          (<span class="compound" id="compound-bonus">+0% bonus</span>)
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 sub-section">
+          Every time you recruit astronauts after the time interval, your recruit bonus grows by
+          <span id="compound-percent">-%</span>
+          (max <span id="max-compound">+-%</span>). Selling ores will reset your bonus to 0.
+          Time until next recruit bonus is activated: <span style="font-weight: 700;" id="compound-timer">--:--:--</span>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 referral-link">
+            <span>
+              <i class="bi-check2-square"></i>
+              Earn
+              <span id="ref-percent">-%</span>
+              <span>when someone uses your referral link!</span>
+              <span>
+                <a id="reflink"></i></a><span onclick="copyRef()"><i class="ri-file-copy-line"></i><span id="copied"></span>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Dashboard Section -->
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="bg faq section-bg">
+      <div class="container" data-aos="fade-up">
+	<div class="faq-list">
+          <ul>
+            <li>
+              <i class="bx bx-help-circle icon-help"></i>
+              <a
+                data-bs-toggle="collapse"
+                class="collapse"
+                data-bs-target="#faq-list-1"
+                >What is the Space Field Game?
+                <i class="bx bx-chevron-down icon-show"></i
+                ><i class="bx bx-chevron-up icon-close"></i
+              ></a>
+              <div
+                id="faq-list-1"
+                class="collapse show"
+                data-bs-parent=".faq-list"
+              >
+                <p>
+                The Space Field Game is a decentralized game built on the Binance Smart Chain. 
+                The object of the game is to recruit more astronauts sooner and more often than other players. This in turn earns you more Space Ore faster. 
+                These Astronauts work for you tirelessly, giving you a daily average of 3.33% of your astronauts' value. 
+                The daily percentage return depends on players' actions that are taken within the platform that impact the astronaut's efficiency rate. 
+                The mining efficiency rate rises and falls as users recruit astronauts', re-hire your earned space ores and sell your space ores for space field tokens. 
+                Once astronauts are recruited, they cannot be sold, and the investment made to recruit them (either through recruit or re-hiring) cannot be taken back. 
+                However, once bought, astronauts will not stop producing yield.
+                <p>
+                NOTE: The sustainability and longevity of this game will depend on every single players' actions. 
+                It is crucial to re-hire your earnings at least as often as you pocket them. The moment someone doesn't do their part, 
+                the game as a whole starts to suffer. It is also important to spread the word and recruit more players to join. 
+                If every person brings in two people, and everyone plays the game as it's meant to be played, everyone wins. 
+                Do your part and this game will last a really long time!
+
+              </div>
+            </li>
+            <li>
+              <i class="bx bx-help-circle icon-help"></i>
+              <a
+                data-bs-toggle="collapse"
+                class="collapse"
+                data-bs-target="#faq-list-2"
+                >What makes it different from others?
+                <i class="bx bx-chevron-down icon-show"></i
+                ><i class="bx bx-chevron-up icon-close"></i
+              ></a>
+              <div
+                id="faq-list-2"
+                class="collapse show"
+                data-bs-parent=".faq-list"
+              >
+                <p>
+                The Space Fields has several anti-dumping and anti-whale measures in place to ensure the longevity of the project. 
+                These measures include maximum deposits, as well as a cutoff time AND a cooldown time for withdrawals.
+                <p>
+                The cutoff time is the amount of time it will take for your "bag" to be full of rewards. 
+                Once the bag is full, it will stop filling until you've taken some action in the game. 
+                This is to prevent whales from letting their rewards accumulate for a long time, 
+                and removes the false impression the contract value is going up when most of it is rewards the whale is waiting to withdraw at once.
+                <p>
+                The cooloff time is the amount of time one has to wait before they can make another withdrawal. 
+                This also prevents the contract balance from decreasing in value too fast. 
+                If the team decides it's necessary to protect the contract balance, 
+                this time period can be adjusted to slow down the rate of withdrawals, 
+                but it can only be set to a value less than or equal to 24 hours (per contract rules).
+                <p>
+                To reward players for playing the game, 
+                there is a bonus when you re-hire your daily ore earnings instead of selling them. 
+                The bonus increases 4% every 12 hours that you compound without withdrawing (56% max after 7 days). 
+                This incentivizes the user to compound more often, which will help boost the games efficiency rate in the long run. 
+                To be able to utilize the re-hire bonus feature, the player must not compound before the provided timer reaches 00:00:00.
+                <p>
+                For the players who choose to not play the game and only sell, 
+                there will be a 40% tax on those sells that will stay in the contract. 
+                If the player makes two or more consecutive sells, this tax will be applied. 
+                Selling that are made following a re-hire action (after the 12 hour cooldown) will be exempt from the tax.
+                <p>
+                Space Field also has a very unique feature that has never been done before which effectively decreases the amount of hiring inflation 
+                that occurs over a long period of time. 
+                Every sell action will only add 50% of the amount sold to the total supply. Other games add 100% of what is sold to the total supply. 
+                This means the contract will have a lower inflation rate, 
+                keeping the astronauts market supply more scarce and more valuable than other similar games.
+                </p>
+              </div>
+            </li>
+            <li>
+              <i class="bx bx-help-circle icon-help"></i>
+              <a
+                data-bs-toggle="collapse"
+                class="collapse"
+                data-bs-target="#faq-list-3"
+                >How does this game work?
+                <i class="bx bx-chevron-down icon-show"></i
+                ><i class="bx bx-chevron-up icon-close"></i
+              ></a>
+              <div
+                id="faq-list-3"
+                class="collapse show"
+                data-bs-parent=".faq-list"
+              >
+                <p>
+                This games work similarly to a financial market, where an asset has intrinsic value that is relative to the supply or demand of said asset. 
+                  Astronauts are purchased with a pre-determined currency at a price relative to the astronauts's current mining efficiency rate. 
+                  After the astronauts are purchased, they go to work for you right away to give you the best yield on your investment possible, 
+                  for as long as possible. Just as any other asset bought and sold on an open market, the price of a astronauts will fluctuate over time, 
+                  as will the mining efficiency rate, as you and other players recruit astronauts, compound earnings and sell earnings. 
+                  To put it plainly, the more demand for the astronauts, the more they will increase in value and the more yield they will produce. 
+                  Inversely, when the demand decreases, so will the value of the astronauts and their daily return on investment.
+                <p>
+                The main difference between a this game and a traditional financial market is that a recruited astronauts cannot be sold, 
+                  only the value they provide can be sold. As the players of the game as a whole compound their earnings and make new deposits, 
+                  the game efficiency rate will stay relatively constant, but the moment players start to sell more than they are compounding, 
+                  the efficiency rate will begin to drop as to preserve the TVL and longevity of the game.
+                </p>
+              </div>
+            </li>
+        </div>
+      </div>
+    </section>
+    <!-- End Frequently Asked Questions Section -->
+
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        © Copyright <strong><span>Space Fields Team</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script type="text/javascript" src="assets/js/main_eth.js"></script>
+</body>
+
+</html>
